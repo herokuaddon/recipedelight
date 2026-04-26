@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Discover easy, delicious, and healthy recipes with a beautiful cooking website designed for food lovers, meal planning, and home kitchens." />
+  <meta name="keywords" content="recipes, cooking, healthy meals, easy recipes, dinner ideas, food blog, meal planning" />
+  <meta name="author" content="Recipe Delight" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://example.com/" />
+  <meta property="og:title" content="Recipe Delight - Delicious Recipes for Every Home Cook" />
+  <meta property="og:description" content="Find delicious, easy, and healthy recipes with a clean, attractive recipe website." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://example.com/" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1495521821757-a1efb6729352?auto=format&fit=crop&w=1200&q=80" />
+  <title>Recipe Delight | Delicious Recipes for Every Home Cook</title>
+  <style>
+    :root{
+      --bg:#fff8f3;
+      --card:#ffffff;
+      --text:#2f2a26;
+      --muted:#6e625a;
+      --accent:#e76f51;
+      --accent2:#2a9d8f;
+      --border:#f0ddd3;
+      --shadow:0 12px 30px rgba(0,0,0,.08);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Arial, Helvetica, sans-serif;
+      color:var(--text);
+      background:linear-gradient(180deg,#fff8f3 0%, #fff 100%);
+      line-height:1.7;
+    }
+    a{color:var(--accent); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:1200px; margin:0 auto; padding:0 20px}
+    header{
+      position:sticky; top:0; z-index:20;
+      background:rgba(255,248,243,.92);
+      backdrop-filter: blur(10px);
+      border-bottom:1px solid var(--border);
+    }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:18px 0;
+      gap:20px;
+    }
+    .logo{
+      font-size:1.6rem;
+      font-weight:800;
+      color:var(--text);
+    }
+    .logo span{color:var(--accent)}
+    nav ul{
+      list-style:none; display:flex; gap:18px; padding:0; margin:0; flex-wrap:wrap;
+    }
+    nav a{
+      color:var(--text);
+      font-weight:600;
+    }
+    .hero{
+      padding:70px 0 40px;
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.2fr .8fr;
+      gap:30px;
+      align-items:center;
+    }
+    .hero h1{
+      font-size:clamp(2.2rem, 4vw, 4.2rem);
+      line-height:1.1;
+      margin:0 0 16px;
+    }
+    .hero p{color:var(--muted); font-size:1.05rem}
+    .cta{
+      display:inline-block;
+      background:var(--accent);
+      color:#fff;
+      padding:14px 22px;
+      border-radius:999px;
+      margin-top:10px;
+      font-weight:700;
+      box-shadow:var(--shadow);
+    }
+    .hero-card{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:24px;
+      overflow:hidden;
+      box-shadow:var(--shadow);
+    }
+    .hero-card img{
+      width:100%;
+      height:380px;
+      object-fit:cover;
+      display:block;
+      background:#f3f3f3;
+    }
+    section{padding:36px 0}
+    .section-title{
+      font-size:2rem;
+      margin:0 0 14px;
+    }
+    .muted{color:var(--muted)}
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:22px;
+    }
+    .card{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:20px;
+      overflow:hidden;
+      box-shadow:var(--shadow);
+    }
+    .card img{
+      width:100%;
+      height:220px;
+      object-fit:cover;
+      display:block;
+      background:#f2f2f2;
+    }
+    .card-content{padding:18px}
+    .badge{
+      display:inline-block;
+      padding:6px 10px;
+      border-radius:999px;
+      background:#fff1eb;
+      color:var(--accent);
+      font-size:.85rem;
+      font-weight:700;
+      margin-bottom:10px;
+    }
+    .legal-box{
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:20px;
+      padding:24px;
+      box-shadow:var(--shadow);
+    }
+    footer{
+      margin-top:40px;
+      padding:28px 0;
+      border-top:1px solid var(--border);
+      color:var(--muted);
+      font-size:.95rem;
+    }
+    .footer-links{display:flex; gap:16px; flex-wrap:wrap}
+    .article{
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:20px;
+      padding:28px;
+      box-shadow:var(--shadow);
+    }
+    @media (max-width:900px){
+      .hero-grid,.grid{grid-template-columns:1fr}
+      .hero-card img{height:300px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="logo">Recipe <span>Delight</span></div>
+      <nav>
+        <ul>
+          <li><a href="#recipes">Recipes</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="disclaimer.html">Disclaimer</a></li>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container hero">
+      <div class="hero-grid">
+        <div>
+          <h1>Fresh, Flavorful, and Easy Recipes for Everyday Cooking</h1>
+          <p>
+            Welcome to Recipe Delight, a modern recipe website built for home cooks who want simple inspiration,
+            practical meal ideas, and beautiful food content that is easy to browse. Whether you are planning a weeknight
+            dinner, preparing a healthy lunch, or looking for a sweet treat to share with family, this site is designed
+            to help you find the right recipe quickly. Our layout is clean, mobile-friendly, SEO-friendly, and built with
+            user trust in mind. We focus on useful recipe content, clear navigation, and a pleasant reading experience so
+            visitors can enjoy the site without distractions.
+          </p>
+          <p>
+            Cooking at home should feel rewarding, not stressful. That is why this website is built around clarity and
+            simplicity. Each recipe section is presented in a way that helps visitors understand ingredients, preparation
+            ideas, and serving suggestions at a glance. We also prioritize helpful content that can support long-term SEO
+            growth, including natural keyword placement, descriptive headings, and informative text that answers common
+            cooking questions. This approach makes the website useful for readers and more discoverable in search results.
+          </p>
+          <a class="cta" href="#recipes">Explore Recipes</a>
+        </div>
+        <div class="hero-card">
+          <img
+            src="https://images.unsplash.com/photo-1495521821757-a1efb6729352?auto=format&fit=crop&w=1200&q=80"
+            alt="Fresh healthy breakfast recipe"
+            onerror="this.onerror=null;this.src='https://via.placeholder.com/1200x800?text=Recipe+Image';"
+          />
+        </div>
+      </div>
+    </div>
+
+    <section id="about">
+      <div class="container article">
+        <h2 class="section-title">About This Recipe Website</h2>
+        <p>
+          This recipe website was created to serve a broad audience of food lovers, beginners, and experienced home cooks.
+          The goal is to provide a trustworthy and enjoyable place to discover meals, snacks, desserts, and kitchen tips.
+          A good recipe site should do more than show photos. It should guide users through the cooking journey with
+          well-organized content, easy-to-read headings, and practical advice that makes the process smoother. That is why
+          this design emphasizes readability, helpful structure, and professional presentation.
+        </p>
+        <p>
+          From an SEO perspective, recipe websites benefit from clear topic relevance. Search engines understand content
+          better when pages are focused, descriptive, and informative. This template uses a strong title, meta description,
+          internal links, semantic headings, and content written in natural language. It also leaves room for future growth.
+          You can add individual recipe pages, category pages such as breakfast, lunch, dinner, desserts, and healthy meals,
+          and even tutorial articles about techniques like baking, roasting, grilling, and meal prepping.
+        </p>
+        <p>
+          For user engagement, the design uses warm colors, attractive card layouts, and high-quality imagery. Images are
+          important for recipe websites because visitors often decide what to cook based on visual appeal. However, broken
+          images can damage trust and make the site look incomplete. To solve that, every image here includes a fallback
+          handler so that if an external image fails to load, a placeholder image appears instead. This keeps the page
+          visually consistent and prevents empty image areas.
+        </p>
+        <p>
+          To remain Google Ads policy friendly, the site avoids misleading claims, prohibited content, and aggressive layout
+          patterns. The pages are clean, transparent, and useful. Legal pages such as Disclaimer and Privacy Policy are linked
+          in the navigation and footer, which helps demonstrate trust and compliance. If you plan to add advertising later,
+          keep content original, avoid low-quality duplicate pages, and make sure ads do not overwhelm the main article or
+          interfere with usability.
+        </p>
+        <p>
+          You can expand this template into a larger food platform by adding recipe filters, search functionality, print
+          buttons, ingredient lists, cooking times, nutritional notes, and step-by-step instructions. You may also include
+          author bios, user reviews, and structured data for recipes to improve rich result eligibility. With the right
+          content strategy, a recipe site can grow into a valuable source of traffic and repeat visitors.
+        </p>
+        <p>
+          The biggest advantage of this theme is its balance between beauty and practicality. The typography is readable,
+          spacing is comfortable, and sections are easy to scan. Whether your audience is browsing from a phone or desktop,
+          the layout adapts well. That matters because modern recipe traffic often comes from mobile search users looking
+          for quick ideas during meal preparation. A responsive design improves both user satisfaction and SEO performance.
+        </p>
+      </div>
+    </section>
+
+    <section id="recipes">
+      <div class="container">
+        <h2 class="section-title">Popular Recipes</h2>
+        <p class="muted">A few sample cards to get your recipe homepage started.</p>
+        <div class="grid">
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=1200&q=80" alt="Healthy avocado toast recipe" onerror="this.onerror=null;this.src='https://via.placeholder.com/1200x800?text=Recipe+Image';">
+            <div class="card-content">
+              <span class="badge">Breakfast</span>
+              <h3>Healthy Avocado Toast</h3>
+              <p>Quick, nourishing, and perfect for busy mornings with fresh toppings and simple preparation.</p>
+            </div>
+          </article>
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1200&q=80" alt="Creamy pasta dinner recipe" onerror="this.onerror=null;this.src='https://via.placeholder.com/1200x800?text=Recipe+Image';">
+            <div class="card-content">
+              <span class="badge">Dinner</span>
+              <h3>Creamy Garlic Pasta</h3>
+              <p>A comforting family dinner recipe made with rich flavor, pantry staples, and easy steps.</p>
+            </div>
+          </article>
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1481931715705-36f5f79f1f3c?auto=format&fit=crop&w=1200&q=80" alt="Fresh salad recipe" onerror="this.onerror=null;this.src='https://via.placeholder.com/1200x800?text=Recipe+Image';">
+            <div class="card-content">
+              <span class="badge">Healthy</span>
+              <h3>Colorful Garden Salad</h3>
+              <p>Fresh vegetables, crisp greens, and a light dressing for a balanced and refreshing meal.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-links">
+        <a href="disclaimer.html">Disclaimer</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="#about">About</a>
+      </div>
+      <p>© 2026 Recipe Delight. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

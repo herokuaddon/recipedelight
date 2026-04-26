@@ -1,0 +1,95 @@
+/*
+Theme Name: Recipe Delight
+Theme URI: https://example.com/
+Author: Your Name
+Description: A clean, SEO-friendly WordPress-style recipe theme with legal pages and broken image protection.
+Version: 1.0
+License: GNU General Public License v2 or later
+Text Domain: recipe-delight
+*/
+
+:root{
+  --bg:#fff8f3;
+  --card:#ffffff;
+  --text:#2f2a26;
+  --muted:#6e625a;
+  --accent:#e76f51;
+  --accent2:#2a9d8f;
+  --border:#f0ddd3;
+  --shadow:0 12px 30px rgba(0,0,0,.08);
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  color:var(--text);
+  background:linear-gradient(180deg,#fff8f3 0%, #fff 100%);
+  line-height:1.7;
+}
+img{max-width:100%; height:auto; display:block}
+a{color:var(--accent); text-decoration:none}
+a:hover{text-decoration:underline}
+.container{max-width:1200px; margin:0 auto; padding:0 20px}
+.site-header{
+  position:sticky; top:0; z-index:20;
+  background:rgba(255,248,243,.92);
+  backdrop-filter: blur(10px);
+  border-bottom:1px solid var(--border);
+}
+.nav-wrap{
+  display:flex; justify-content:space-between; align-items:center;
+  gap:20px; padding:18px 0;
+}
+.site-logo{
+  font-size:1.6rem; font-weight:800; color:var(--text);
+}
+.site-logo span{color:var(--accent)}
+.menu{
+  list-style:none; display:flex; flex-wrap:wrap; gap:18px; margin:0; padding:0;
+}
+.menu a{font-weight:600; color:var(--text)}
+.hero{padding:70px 0 40px}
+.hero-grid{
+  display:grid; grid-template-columns:1.2fr .8fr; gap:30px; align-items:center;
+}
+.hero h1{font-size:clamp(2.2rem, 4vw, 4.2rem); line-height:1.1; margin:0 0 16px}
+.hero p{color:var(--muted); font-size:1.05rem}
+.cta{
+  display:inline-block; background:var(--accent); color:#fff;
+  padding:14px 22px; border-radius:999px; margin-top:10px; font-weight:700;
+  box-shadow:var(--shadow);
+}
+.hero-card,.card,.content-box{
+  background:var(--card); border:1px solid var(--border);
+  border-radius:20px; overflow:hidden; box-shadow:var(--shadow);
+}
+.hero-card img,.card img{width:100%; object-fit:cover; background:#f2f2f2}
+.hero-card img{height:380px}
+.card img{height:220px}
+.section{padding:36px 0}
+.section-title{font-size:2rem; margin:0 0 14px}
+.muted{color:var(--muted)}
+.grid{display:grid; grid-template-columns:repeat(3,1fr); gap:22px}
+.card-content{padding:18px}
+.badge{
+  display:inline-block; padding:6px 10px; border-radius:999px;
+  background:#fff1eb; color:var(--accent); font-size:.85rem; font-weight:700;
+  margin-bottom:10px;
+}
+.content-box{padding:28px}
+.post-meta{color:var(--muted); font-size:.95rem; margin-bottom:18px}
+.recipe-box{
+  background:#fff7f4; border:1px solid var(--border); border-radius:16px; padding:20px; margin:20px 0;
+}
+.recipe-box h2,.recipe-box h3{margin-top:0}
+.recipe-box ul,.recipe-box ol{padding-left:20px}
+.site-footer{
+  margin-top:40px; padding:28px 0; border-top:1px solid var(--border); color:var(--muted);
+  font-size:.95rem;
+}
+.footer-links{display:flex; gap:16px; flex-wrap:wrap}
+@media (max-width:900px){
+  .hero-grid,.grid{grid-template-columns:1fr}
+  .hero-card img{height:300px}
+}
